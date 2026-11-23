@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Thai", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Outfit", "IBM Plex Sans Thai", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-navy-950: #06101E;
+  --color-navy-900: #0B192C;
+  --color-navy-800: #132847;
+  --color-navy-700: #1E3A6E;
+  --color-navy-100: #EBF0F7;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #0B192C;
+    background-color: #FFFFFF;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
